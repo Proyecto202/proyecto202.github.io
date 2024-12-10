@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programas del DIF Tuxpan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Fondo blanco marfil degradado */
+        body {
+            background: linear-gradient(to right, #f8f1e7, #eeae60); /* Degradado de blanco a marfil */
+            color: #333; /* Color del texto */
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Estilo de las imágenes */
+        .programa img {
+            width: 100%;
+            height: 200px; /* Altura fija */
+            object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(36, 32, 32, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Efecto hover en las imágenes */
+        .programa img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilo del contenido desplegable */
+        .contenido {
+            display: none;
+            margin-top: 20px;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Botón de regresar, más pequeño y centrado */
+        .btn-regresar {
+            margin-top: 50px;
+            display: block;
+            width: 200px; /* Ancho más reducido */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #190909;
+            text-decoration: none;
+            background-color: #0ee681; /* Verde metálico */
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-regresar:hover {
+            background-color: #44524d; /* Verde más oscuro en hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mt-4">Programas del DIF Tuxpan</h1>
+
+        <!-- Filas con 2 columnas para imágenes y contenido -->
+        <div class="row">
+            <!-- Sección de Desayunos Escolares -->
+            <div class="col-md-6 programa">
+                <img src="img/desayunos.jpg" alt="Desayunos Escolares" onclick="toggleContent('desayunos')">
+                <div id="desayunos" class="contenido">
+                    <h2>Desayunos Escolares</h2>
+                    <p>El programa de Desayunos Escolares ofrece alimentos nutritivos a niños en edad escolar para asegurar una alimentación balanceada y apoyar su rendimiento académico.</p>
+                </div>
+            </div>
+
+            <!-- Sección de Despensas (Municipal y Estatal) -->
+            <div class="col-md-6 programa">
+                <img src="img/despensas.jpg" alt="Despensas" onclick="toggleContent('despensas')">
+                <div id="despensas" class="contenido">
+                    <h2>Despensas Municipal y Estatal</h2>
+                    <p>El DIF Tuxpan, en colaboración con autoridades municipales y estatales, distribuye despensas con alimentos básicos a familias en situación vulnerable para mejorar su calidad de vida.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Sección de Lentes -->
+            <div class="col-md-6 programa">
+                <img src="img/lentes.jpeg" alt="Lentes" onclick="toggleContent('lentes')">
+                <div id="lentes" class="contenido">
+                    <h2>Lentes</h2>
+                    <p>Este programa proporciona lentes a personas que necesitan corrección visual pero no tienen acceso a servicios oftalmológicos o no pueden costearlos.</p>
+                </div>
+            </div>
+
+            <!-- Sección de Limpieza de Hogar -->
+            <div class="col-md-6 programa">
+                <img src="img/limpieza.jpg" alt="Limpieza de Hogar" onclick="toggleContent('limpieza')">
+                <div id="limpieza" class="contenido">
+                    <h2>Limpieza de Hogar</h2>
+                    <p>El programa de Limpieza de Hogar ofrece apoyo a personas en situación vulnerable, especialmente adultos mayores o personas con discapacidad, para mantener sus hogares limpios y en condiciones saludables.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para regresar al índice -->
+        <a href="index.html" class="btn-regresar">Regresar al Menú Principal</a>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

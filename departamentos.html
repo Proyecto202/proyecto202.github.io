@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Departamentos - DIF TUXPAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* Fondo rojo sangre */
+        body {
+            background-color: wheat; /* Rojo sangre */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 60px;
+        }
+
+        /* Títulos con color negro y sombra */
+        h1, h2 {
+            color: rgb(13, 8, 8);
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(246, 227, 227, 0.5);
+            animation: slide-up 1s ease-in-out; /* Efecto de desplazamiento */
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Estilo de los videos */
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .video-item {
+            flex: 1 1 30%;
+            max-width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Estilo del botón de regreso */
+        .back-button {
+            display: block;
+            margin: 0 auto;
+            padding: 5px 20px; /* Estrecho */
+            background-color: #038C33;
+            background-image: linear-gradient(45deg, #038C33, #56D9A6); /* Verde metálico */
+            color: rgb(26, 22, 22);
+            text-align: center;
+            border-radius: 20px;
+            text-decoration: none;
+            width: fit-content; /* Para que el botón sea más estrecho */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra metálica */
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-image: linear-gradient(45deg, #56D9A6, #038C33); /* Efecto inverso al pasar el ratón */
+            color: black;
+        }
+
+        /* Estilo de la imagen en la parte superior izquierda */
+        .top-left-image {
+            position: absolute;
+            top: 10px; /* Ajusta la posición vertical */
+            left: 10px; /* Ajusta la posición horizontal */
+            width: 200px; /* Ajusta el tamaño de la imagen */
+            height: auto; /* Mantiene la proporción */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Imagen en la parte superior izquierda -->
+    <img src="img/logo-dif.jpg" alt="Logo" class="top-left-image"> <!-- Cambia 'tu-imagen.png' por el nombre real de tu imagen -->
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Departamentos</h1>
+        <h2>Explora nuestros programas</h2>
+
+        <!-- Videos de los departamentos -->
+        <div class="video-container">
+            <!-- Video de Desayunos Escolares -->
+            <div class="video-item">
+                <h3>Desayunos Escolares</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal1">Ver Video</button>
+            </div>
+
+            <!-- Video de Discapacidad -->
+            <div class="video-item">
+                <h3>Discapacidad</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal2">Ver Video</button>
+            </div>
+
+            <!-- Video de Adulto Mayor -->
+            <div class="video-item">
+                <h3>Adulto Mayor</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal3">Ver Video</button>
+            </div>
+
+            <!-- Video de Salud -->
+            <div class="video-item">
+                <h3>Empoderamiento y empleo</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal4">Ver Video</button>
+            </div>
+            <br>
+
+            <!-- Video de Bienestar Mental -->
+            <div class="video-item">
+                <h3>Bienestar Mental</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal5">Ver Video</button>
+            </div>
+            <br>
+
+            <!-- Video de Salud para la Tercera Edad -->
+            <div class="video-item">
+                <h3>Felicidad para la Tercera Edad</h3>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#videoModal6">Ver Video</button>
+            </div>
+        </div>
+        <br>
+
+        <!-- Modal para Desayunos Escolares -->
+        <div class="modal fade" id="videoModal1" tabindex="-1" aria-labelledby="videoModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel1">Desayunos Escolares</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/Desayunos escolares en Nayarit.webm" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Discapacidad -->
+        <div class="modal fade" id="videoModal2" tabindex="-1" aria-labelledby="videoModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel2">Discapacidad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/Consulta a Personas con Discapacidad en Nayarit – Organizaciones.webm" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Adulto Mayor -->
+        <div class="modal fade" id="videoModal3" tabindex="-1" aria-labelledby="videoModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel3">Adulto Mayor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/Para DIF Nayarit las y los adultos mayores son una prioridad.webm" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+        <!-- Modal para Salud -->
+        <div class="modal fade" id="videoModal4" tabindex="-1" aria-labelledby="videoModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel4">Empoderamiento y empleo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/Impulsa Corazón de Tu Gobierno emprendimiento y auto empleo.webm" type="video/mp4"> <!-- Cambia la ruta del video según sea necesario -->
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+        <!-- Modal para Bienestar Mental -->
+        <div class="modal fade" id="videoModal5" tabindex="-1" aria-labelledby="videoModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel5">Bienestar Mental</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/Para el DIF Nayarit, la salud mental y el bienestar emocional de la ciudadanía es muy importante.webm" type="video/mp4"> <!-- Cambia la ruta del video según sea necesario -->
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+        <!-- Modal para Salud para la Tercera Edad -->
+        <div class="modal fade" id="videoModal6" tabindex="-1" aria-labelledby="videoModalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="videoModalLabel6">Salud para la Tercera Edad</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="videos/En el Sistema DIF Nayarit nos comprometemos con la felicidad y salud de nuestros adultos mayores.webm" type="video/mp4"> <!-- Cambia la ruta del video según sea necesario -->
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Botón para regresar al inicio -->
+        <a href="index.html" class="back-button">Regresar al Inicio</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
